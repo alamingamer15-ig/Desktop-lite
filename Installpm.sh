@@ -32,3 +32,6 @@ flatpak install -y flathub org.vinegarhq.Vinegar
 
 echo "🚀 Done!"
 echo "Flatpak environment ready."
+
+echo "Downloasing test rbxl"
+curl AeternusRevamp.rbxl "https://github.com/alamingamer15-ig/Lune-Test/releases/download/main/aeternusRevamp1.3.rbxl"
