@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-
+sudo service dbus start
 echo "📦 Flatpak setup starting..."
 
 # 1. Install Flatpak if missing
@@ -14,7 +14,7 @@ fi
 
 # 2. Enable Flathub
 echo "🌐 Enabling Flathub..."
-flatpak remote-add --if-not-exists flathub \
+sudo flatpak remote-add --if-not-exists flathub \
 https://flathub.org/repo/flathub.flatpakrepo
 
 # 3. Update Flatpak
@@ -25,13 +25,10 @@ flatpak update -y
 echo "📦 Installing apps..."
 
 # Steam
-flatpak install -y flathub com.valvesoftware.Steam
+sudo flatpak install -y flathub com.valvesoftware.Steam
 
 # Vinegar
-flatpak install -y flathub org.vinegarhq.Vinegar
+sudo flatpak install -y flathub org.vinegarhq.Vinegar
 
 echo "🚀 Done!"
 echo "Flatpak environment ready."
-
-echo "Downloasing test rbxl"
-curl AeternusRevamp.rbxl "https://github.com/alamingamer15-ig/Lune-Test/releases/download/main/aeternusRevamp1.3.rbxl"
